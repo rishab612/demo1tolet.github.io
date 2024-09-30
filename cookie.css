@@ -1,0 +1,144 @@
+
+
+.cookie-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    animation: popup 0.5s ease;
+    z-index: 1000;
+}
+
+.cookie-icon {
+    width: 100px; /* Increase width as needed */
+    height: 100px; /* Increase height as needed */
+    margin-bottom: 15px;
+}
+
+.cookie-content h2 {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.cookie-content p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn i {
+    font-size: 1.2em;
+}
+
+.btn.accept {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn.accept:hover {
+    background-color: #45a045;
+}
+
+.btn.customize {
+    background-color: #ff9800;
+    color: white;
+}
+
+.btn.customize:hover {
+    background-color: #e68a00;
+}
+
+.btn.reject {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn.reject:hover {
+    background-color: #d73228;
+}
+
+/* Modal Styling */
+.cookie-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIn 0.5s ease;
+    z-index: 1100;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.8) translate(-50%, -50%);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cookie-card, .cookie-modal {
+        width: 90%;
+    }
+}
